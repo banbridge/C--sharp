@@ -1,0 +1,75 @@
+﻿<Page x:Class="T12地铁系统.Paths.Path3"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:T12地铁系统.Paths"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="800" Background="Lavender"
+      Title="Path3">
+    <Page.Resources>
+
+        <Style TargetType="Ellipse">
+            <Setter Property="Width" Value="20"/>
+            <Setter Property="Height" Value="20"/>
+            <EventSetter Event="MouseLeftButtonDown" Handler="ellipse_click"></EventSetter>
+            <Setter Property="Fill" >
+                <Setter.Value>
+                    <RadialGradientBrush>
+                        <GradientStop Color="Gold" Offset="0.25"/>
+                        <GradientStop Color="Red" Offset="0.50"/>
+                        <GradientStop Color="Purple" Offset="1"/>
+                    </RadialGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="15"/>
+        </Style>
+    </Page.Resources>
+    <Canvas Width="800" Height="600" >
+        <Path Stroke="#11FF41" StrokeThickness="8" Data="M 9 149 244 149 432 337 740 337 C 762 340 762 360 762 360 L 762 559"/>
+        <Ellipse Tag="0" ToolTip="白松路" Canvas.Left="10" Canvas.Top="138"/>
+        <Ellipse Tag="1" ToolTip="西四环" Canvas.Left="50" Canvas.Top="138"/>
+        <Ellipse Tag="2" ToolTip="科学大道" Canvas.Left="90" Canvas.Top="138"/>
+        <Ellipse Tag="3" ToolTip="雪松路" Canvas.Left="130" Canvas.Top="138"/>
+        <Ellipse Tag="4" ToolTip="垂柳路" Canvas.Left="170" Canvas.Top="138"/>
+        <Ellipse Tag="5" ToolTip="兴陵铺" Canvas.Left="210" Canvas.Top="138"/>
+        <Ellipse Tag="6" ToolTip="小孟寨" Canvas.Left="260" Canvas.Top="165"/>
+        <Ellipse Tag="7" ToolTip="大石桥" Canvas.Left="300" Canvas.Top="205"/>
+        <Ellipse Tag="8" ToolTip="泰康路" Canvas.Left="340" Canvas.Top="245"/>
+        <Ellipse Tag="9" ToolTip="二七广场" Canvas.Left="380" Canvas.Top="285"/>
+        <Ellipse Tag="10" ToolTip="东大街" Canvas.Left="420" Canvas.Top="325"/>
+        <Ellipse Tag="11" ToolTip="未来路" Canvas.Left="470" Canvas.Top="325"/>
+        <Ellipse Tag="12" ToolTip="凤凰台" Canvas.Left="530" Canvas.Top="325"/>
+        <Ellipse Tag="13" ToolTip="中州大道" Canvas.Left="600" Canvas.Top="325"/>
+        <Ellipse Tag="14" ToolTip="东建材" Canvas.Left="665" Canvas.Top="325"/>
+        <Ellipse Tag="15" ToolTip="小店" Canvas.Left="735" Canvas.Top="325"/>
+        <Ellipse Tag="16" ToolTip="西营岗" Canvas.Left="750" Canvas.Top="373"/>
+        <Ellipse Tag="17" ToolTip="单庄" Canvas.Left="750" Canvas.Top="433"/>
+        <Ellipse Tag="18" ToolTip="托月路" Canvas.Left="750" Canvas.Top="482"/>
+        <Ellipse Tag="19" ToolTip="金广南路" Canvas.Left="750" Canvas.Top="540"/>
+        <Label Canvas.Top="170">白松路</Label>
+        <Label Canvas.Left="37" Canvas.Top="104">西四环</Label>
+        <Label Canvas.Left="80" Canvas.Top="170">科学大道</Label>
+        <Label Canvas.Left="108" Canvas.Top="104">雪松路</Label>
+        <Label Canvas.Left="155" Canvas.Top="170">垂柳路</Label>
+        <Label Canvas.Left="196" Canvas.Top="100">兴陵铺</Label>
+        <Label Canvas.Left="285" Canvas.Top="150">小孟寨</Label>
+        <Label Canvas.Left="340" Canvas.Top="190">大石桥</Label>
+        <Label Canvas.Left="380" Canvas.Top="239">泰康路</Label>
+        <Label Canvas.Left="410" Canvas.Top="276">二七广场</Label>
+        <Label Canvas.Left="410" Canvas.Top="350">东大街</Label>
+        <Label Canvas.Left="465" Canvas.Top="350">未来路</Label>
+        <Label Canvas.Left="520" Canvas.Top="285">凤凰台</Label>
+        <Label Canvas.Left="566" Canvas.Top="350">中州大道</Label>
+        <Label Canvas.Left="640" Canvas.Top="285">东建材</Label>
+        <Label Canvas.Left="726" Canvas.Top="291">小店</Label>
+        <Label Canvas.Left="679" Canvas.Top="373">西营岗</Label>
+        <Label Canvas.Left="679" Canvas.Top="424">单庄</Label>
+        <Label Canvas.Left="665" Canvas.Top="482">托月路</Label>
+        <Label Canvas.Left="649" Canvas.Top="530">金广南路</Label>
+        <TextBlock Canvas.Left="543" Canvas.Top="76" FontSize="47" TextWrapping="WrapWithOverflow" FontFamily="楷体" FontWeight="Bold" Foreground="Red" Width="54" Height="168">三号线</TextBlock>
+    </Canvas>
+
+</Page>

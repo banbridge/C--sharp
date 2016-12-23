@@ -1,0 +1,82 @@
+﻿<Page x:Class="T12地铁系统.Paths.Path5"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:T12地铁系统.Paths"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="800" Background="Lavender"
+      Title="Path5">
+
+    <Page.Resources>
+        <Style TargetType="Ellipse">
+            <Setter Property="Width" Value="20"/>
+            <Setter Property="Height" Value="20"/>
+            <EventSetter Event="MouseLeftButtonDown" Handler="ellipse_click"></EventSetter>
+            <Setter Property="Fill" >
+                <Setter.Value>
+                    <RadialGradientBrush>
+                        <GradientStop Color="Gold" Offset="0.25"/>
+                        <GradientStop Color="Red" Offset="0.50"/>
+                        <GradientStop Color="Purple" Offset="1"/>
+                    </RadialGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="15"/>
+        </Style>
+    </Page.Resources>
+    <Canvas Width="800" Height="600">
+        <Label Canvas.Left="70" Canvas.Top="40" FontSize="47" FontFamily="楷体" FontWeight="Bold" Foreground="Red">五号线:</Label>
+        <Path Stroke="#2AA5F8" StrokeThickness="8" Data="M 273 196 649 196 649 435 193 435 193 275 Z"/>
+        <Ellipse Tag="0" ToolTip="天明路" Canvas.Left="260" Canvas.Top="186"/>
+        <Ellipse Tag="1" ToolTip="农大" Canvas.Left="320" Canvas.Top="186"/>
+        <Ellipse Tag="2" ToolTip="关虎屯" Canvas.Left="380" Canvas.Top="186"/>
+        <Ellipse Tag="3" ToolTip="众意路" Canvas.Left="450" Canvas.Top="186"/>
+        <Ellipse Tag="4" ToolTip="如意东路" Canvas.Left="510" Canvas.Top="186"/>
+        <Ellipse Tag="5" ToolTip="外环东路" Canvas.Left="570" Canvas.Top="186"/>
+        <Ellipse Tag="6" ToolTip="祭城" Canvas.Left="638" Canvas.Top="186"/>
+        <Ellipse Tag="7" ToolTip="黄山路" Canvas.Left="638" Canvas.Top="234"/>
+        <Ellipse Tag="8" ToolTip="郑州东" Canvas.Left="638" Canvas.Top="280"/>
+        <Ellipse Tag="9" ToolTip="小店" Canvas.Left="638" Canvas.Top="330"/>
+        <Ellipse Tag="10" ToolTip="经北四路" Canvas.Left="638"  Canvas.Top="390"/>
+        <Ellipse Tag="11" ToolTip="经开三路" Canvas.Left="610" Canvas.Top="425"/>
+        <Ellipse Tag="12" ToolTip="商英街"  Canvas.Left="550" Canvas.Top="425"/>
+        <Ellipse Tag="13" ToolTip="七里河" Canvas.Left="490" Canvas.Top="425"/>
+        <Ellipse Tag="14" ToolTip="城东南路" Canvas.Left="430" Canvas.Top="425"/>
+        <Ellipse Tag="15" ToolTip="五里堡" Canvas.Left="370" Canvas.Top="425"/>
+        <Ellipse Tag="16" ToolTip="客运总站" Canvas.Left="310" Canvas.Top="425"/>
+        <Ellipse Tag="17" ToolTip="航院" Canvas.Left="250" Canvas.Top="425"/>
+        <Ellipse Tag="18" ToolTip="帝湖" Canvas.Left="181" Canvas.Top="425"/>
+        <Ellipse Tag="19" ToolTip="淮河路" Canvas.Left="181" Canvas.Top="390"/>
+        <Ellipse Tag="20" ToolTip="陇海西路" Canvas.Left="181" Canvas.Top="355"/>
+        <Ellipse Tag="21" ToolTip="柏桐路" Canvas.Left="181" Canvas.Top="310"/>
+        <Ellipse Tag="22" ToolTip="牛寨" Canvas.Left="181" Canvas.Top="265"/>
+        <Ellipse  Tag="23" ToolTip="朱屯" Canvas.Left="220" Canvas.Top="230"/>
+        <Label Canvas.Left="225" Canvas.Top="152">天明路</Label>
+        <Label Canvas.Left="310" Canvas.Top="152">农大</Label>
+        <Label Canvas.Left="360" Canvas.Top="152">关虎屯</Label>
+        <Label Canvas.Left="430" Canvas.Top="152">众意路</Label>
+        <Label Canvas.Left="500" Canvas.Top="152">如意东路</Label>
+        <Label Canvas.Left="550" Canvas.Top="152">外环东路</Label>
+        <Label Canvas.Left="630" Canvas.Top="152">祭城</Label>
+        <Label Canvas.Left="670" Canvas.Top="230">黄山路</Label>
+        <Label Canvas.Left="670" Canvas.Top="280">郑州东</Label>
+        <Label Canvas.Left="670" Canvas.Top="330">小店</Label>
+        <Label Canvas.Left="670" Canvas.Top="380">经北四路</Label>
+        <Label Canvas.Left="610" Canvas.Top="450">经开三街</Label>
+        <Label Canvas.Left="540" Canvas.Top="450">商英街</Label>
+        <Label Canvas.Left="470" Canvas.Top="450">七里河</Label>
+        <Label Canvas.Left="410" Canvas.Top="450">城东南路</Label>
+        <Label Canvas.Left="350" Canvas.Top="450">五里堡</Label>
+        <Label Canvas.Left="285" Canvas.Top="450">客运总站</Label>
+        <Label Canvas.Left="245" Canvas.Top="450">航院</Label>
+        <Label Canvas.Left="181" Canvas.Top="450">帝湖</Label>
+        <Label Canvas.Left="100" Canvas.Top="385">淮河路</Label>
+        <Label Canvas.Left="100" Canvas.Top="351">陇海西路</Label>
+        <Label Canvas.Left="100" Canvas.Top="310">桐柏路</Label>
+        <Label Canvas.Left="100" Canvas.Top="260">牛寨</Label>
+        <Label Canvas.Left="161" Canvas.Top="214">朱屯</Label>
+    </Canvas>
+</Page>

@@ -1,0 +1,60 @@
+﻿<Window x:Class="T12地铁系统.windows.Login_manager"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:T12地铁系统.windows"
+        mc:Ignorable="d"
+        Title="管理员登录" Height="448.373"  ResizeMode="NoResize" Width="702.367" Closing="Window_Closing" >
+    <Window.Background>
+        <ImageBrush ImageSource="../images/2.jpg"/>
+    </Window.Background>
+    <StackPanel Margin="0 80 0 0">
+        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Content="管理员登录系统" FontSize="20" 
+                 HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="宋体" FontWeight="Bold"/>
+        <Grid Height="200" Margin="0 20 0 0">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="1,0.5" MappingMode="RelativeToBoundingBox" StartPoint="0,0.5">
+                    <GradientStop Color="#DDFFFFFF" Offset="0.5"/>
+                    <GradientStop Color="#77FFFFFF" Offset="0.3"/>
+                    <GradientStop Color="#77FFFFFF" Offset="0.7"/>
+                    <GradientStop Color="#00FFFFFF" Offset="0.856"/>
+                    <GradientStop Color="#00FFFFFF" Offset="0.151"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Image Grid.Row="0" Grid.Column="1" Source="/images/7.png" Width="30" Height="30"
+               HorizontalAlignment="Right" Margin="0 0 20 0"/>
+            <TextBox Grid.Row="0" Grid.Column="2" Name="userName" Text="Admin" FontSize="15" VerticalAlignment="Center"
+                    Margin="10 0 80 0" Background="Transparent" BorderBrush="Black" />
+            <Image Source="/images/6.png"  Grid.Row="1" Grid.Column="1" Width="30" Height="30"
+               HorizontalAlignment="Right" Margin="0 0 20 0"/>
+            <PasswordBox Password="123" Name="passWord" Grid.Row="1" Grid.Column="2" FontSize="15" VerticalAlignment="Center"
+                     Margin="10 0 80 0" Background="Transparent" BorderBrush="Black"/>
+            <Image x:Name="image_error" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Right" 
+               Source="/Images/error.png" Width="25" Height="25" Margin="0,10,50,6"/>
+            <Label x:Name="type" Content="用户类型:" Grid.Row="2" Grid.Column="1"
+               FontSize="15" HorizontalAlignment="Right" Margin="20 0 20 0" VerticalAlignment="Center"/>
+            <TextBox x:Name="comboBox" Text="管理员" Grid.Row="2" Grid.Column="2" 
+                 FontSize="15" VerticalAlignment="Center" Margin="10,0,80,0" Background="Transparent"
+                 BorderBrush="Black"/>
+            <Button x:Name="login" Content="登录" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" 
+               HorizontalAlignment="Center" Width="75" Height="25" Background="Transparent"
+                Click="login_Click" IsDefault="True" BorderBrush="Black"/>
+            <Label x:Name="UserError_label"  Width="auto" Foreground="Red" Grid.Column="2" HorizontalAlignment="Left" Margin="17.8,39,0,0" VerticalAlignment="Top" Grid.RowSpan="2"/>
+            <Label x:Name="PasswordError_label" Width="auto" Foreground="Red" Grid.Column="2" HorizontalAlignment="Left" Margin="17.8,40.4,0,0" Grid.Row="1" VerticalAlignment="Top" Grid.RowSpan="2"/>
+        </Grid>
+    </StackPanel>
+</Window>

@@ -1,0 +1,243 @@
+﻿<Page x:Class="T12地铁系统.Paths.AllPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:T12地铁系统.Paths"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="800"
+      Title="AllPage">
+
+    <Page.Resources>
+        <Style TargetType="Ellipse">
+            <Setter Property="Width" Value="15"/>
+            <Setter Property="Height" Value="15"/>
+            <Setter Property="Stroke" Value="Black" />
+            <Setter Property="Fill" Value="White"/>
+            <Setter Property="StrokeThickness" Value="2"/>
+        </Style>
+        <Style TargetType="Path">
+            <EventSetter Event="MouseLeftButtonDown" Handler="path_Click"></EventSetter>
+            <EventSetter Event="MouseEnter" Handler="Path_MouseEnter" ></EventSetter>
+            <EventSetter Event="MouseLeave" Handler="Path_MouseLeave" ></EventSetter>
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="10"/>
+        </Style>
+    </Page.Resources>
+    <Canvas Background="Beige"  Width="820" Height="620">
+        <Path  Name="Path1" Stroke="#F73809" StrokeThickness="4" Data="M 102 135  102 320 C 105 338 120 338 120 338 L 280 338 308 368 369 368 449 289 740 289 C 763 289 763 270 763 270  L763 150"/>
+        <Path Name="Path2" Stroke="#902C2C" StrokeThickness="4" Data="M 280 19 430 19 C 448 19 448 40 448 40 L448 590"/>
+        <Path Name="Path3" Stroke="#11FF41" StrokeThickness="4" Data="M 9 179 244 179 432 367 740 367 C 762 370 762 390 762 390 L 762 589"/>
+        <Path Name="Path4" Stroke="#E9C639" StrokeThickness="4" Data="M 282 100 377 100 407 130 560 130 C 574 130 574 150 574 150 L 574 226 552 247 552 528 583 556 778 556"/>
+        <Path Name="Path5" Stroke="#2AA5F8" StrokeThickness="4" Data="M 323 226 699 226 699 465 243 465 243 305 Z"/>
+        <Path Name="Path6" Stroke="#532AF8" StrokeThickness="4" Data="M 355 532 355 420 C 360 399 375 399 375 399  L 480 399 C 501 399 501 380 501 380  L 501 340 C 500 325 510 325 510 325 L 590 325 C 604 325 604 310 604 310 L 604 257 676 186 786 186" />
+        <Ellipse  Margin="94 135"/>
+        <Ellipse  Margin="94 170"/>
+        <Ellipse  Margin="94 235"/>
+        <Ellipse  Margin="94 285"/>
+        <Ellipse  Margin="120,330"/>
+        <Ellipse  Margin="180,330"/>
+        <Ellipse  Margin="235,330"/>
+        <Ellipse  Margin="300,358"/>
+        <Ellipse  Margin="360,358"/>
+        <Ellipse  Margin="440,282"/>
+        <Ellipse  Margin="485,282"/>
+        <Ellipse  Margin="635,282"/>
+        <Ellipse  Margin="691,282"/>
+        <Ellipse  Margin="735,282"/>
+        <Ellipse  Margin="755,220"/>
+        <Ellipse  Margin="755,150"/>
+
+        <Ellipse Canvas.Left="270" Canvas.Top="10"/>
+        <Ellipse Canvas.Left="310" Canvas.Top="10"/>
+        <Ellipse Canvas.Left="360" Canvas.Top="10"/>
+        <Ellipse Canvas.Left="410" Canvas.Top="10"/>
+        <Ellipse Canvas.Left="440" Canvas.Top="50"/>
+        <Ellipse Canvas.Left="440" Canvas.Top="122" />
+        <Ellipse Canvas.Left="440" Canvas.Top="170"/>
+        <Ellipse Canvas.Left="440" Canvas.Top="218"/>
+        <Ellipse Canvas.Left="440" Canvas.Top="515"/>
+        <Ellipse Canvas.Left="440" Canvas.Top="575"/>
+
+        <Ellipse Canvas.Left="5" Canvas.Top="172"/>
+        <Ellipse Canvas.Left="50" Canvas.Top="172"/>
+        <Ellipse Canvas.Left="150" Canvas.Top="172"/>
+        <Ellipse Canvas.Left="210" Canvas.Top="172"/>
+        <Ellipse Canvas.Left="260" Canvas.Top="195"/>
+        <Ellipse Canvas.Left="300" Canvas.Top="235"/>
+        <Ellipse Canvas.Left="350" Canvas.Top="283"/>
+        <Ellipse Canvas.Left="395" Canvas.Top="328"/>
+        <Ellipse Canvas.Left="440" Canvas.Top="360"/>
+        <Ellipse Canvas.Left="545" Canvas.Top="360"/>
+        <Ellipse Canvas.Left="590" Canvas.Top="360"/>
+        <Ellipse Canvas.Left="645" Canvas.Top="360"/>
+        <Ellipse Canvas.Left="755" Canvas.Top="403"/>
+        <Ellipse Canvas.Left="755" Canvas.Top="463"/>
+        <Ellipse Canvas.Left="755" Canvas.Top="512"/>
+        <Ellipse Canvas.Left="755" Canvas.Top="575"/>
+
+        <Ellipse Canvas.Left="282" Canvas.Top="92"/>
+        <Ellipse Canvas.Left="343" Canvas.Top="92"/>
+        <Ellipse Canvas.Left="395" Canvas.Top="122"/>
+        <Ellipse Canvas.Left="510" Canvas.Top="122"/>
+        <Ellipse Canvas.Left="568" Canvas.Top="155"/>
+        <Ellipse Canvas.Left="545" Canvas.Top="282"/>
+        <Ellipse Canvas.Left="545" Canvas.Top="410"/>
+        <Ellipse Canvas.Left="545" Canvas.Top="500"/>
+        <Ellipse Canvas.Left="580" Canvas.Top="550"/>
+        <Ellipse Canvas.Left="650" Canvas.Top="550"/>
+        <Ellipse Canvas.Left="710" Canvas.Top="550"/>
+        <Ellipse Canvas.Left="370" Canvas.Top="218"/>
+        <Ellipse Canvas.Left="500" Canvas.Top="218"/>
+        <Ellipse Canvas.Left="565" Canvas.Top="218"/>
+        <Ellipse Canvas.Left="628" Canvas.Top="218"/>
+        <Ellipse Canvas.Left="691" Canvas.Top="218"/>
+        <Ellipse Canvas.Left="691" Canvas.Top="360"/>
+        <Ellipse Canvas.Left="691" Canvas.Top="420"/>
+        <Ellipse Canvas.Left="660" Canvas.Top="458"/>
+        <Ellipse Canvas.Left="600" Canvas.Top="458"/>
+        <Ellipse Canvas.Left="545" Canvas.Top="458"/>
+        <Ellipse Canvas.Left="490" Canvas.Top="458"/>
+        <Ellipse Canvas.Left="440" Canvas.Top="458"/>
+        <Ellipse Canvas.Left="348" Canvas.Top="458"/>
+        <Ellipse Canvas.Left="300" Canvas.Top="458"/>
+        <Ellipse Canvas.Left="235" Canvas.Top="458"/>
+        <Ellipse Canvas.Left="235" Canvas.Top="415"/>
+        <Ellipse Canvas.Left="235" Canvas.Top="375"/>
+        <Ellipse Canvas.Left="235" Canvas.Top="295"/>
+        <Ellipse Canvas.Left="270" Canvas.Top="260"/>
+
+        <Ellipse Canvas.Left="348" Canvas.Top="520"  />
+        <Ellipse Canvas.Left="348" Canvas.Top="420"  />
+        <Ellipse Canvas.Left="380" Canvas.Top="390"  />
+        <Ellipse Canvas.Left="440" Canvas.Top="390"  />
+        <Ellipse Canvas.Left="493" Canvas.Top="360"  />
+        <Ellipse Canvas.Left="517" Canvas.Top="316"  />
+        <Ellipse Canvas.Left="567" Canvas.Top="316"  />
+        <Ellipse Canvas.Left="595" Canvas.Top="282"  />
+        <Ellipse Canvas.Left="672" Canvas.Top="178"  />
+        <Ellipse Canvas.Left="720" Canvas.Top="178"  />
+        <Ellipse Canvas.Left="775" Canvas.Top="178"  />
+
+
+        <StackPanel Width="80" Background="White" Orientation="Horizontal" Canvas.Left="55" Canvas.Top="77">
+            <Label FontSize="15" Background="Red">1</Label>
+            <Label FontSize="15" >东西线</Label>
+        </StackPanel>
+        <Label Canvas.Left="80" Canvas.Top="112">郑州大学</Label>
+        <Label Canvas.Left="85" Canvas.Top="190">科学大道</Label>
+        <Label Canvas.Left="49" Canvas.Top="227">梧桐街</Label>
+        <Label Canvas.Left="49" Canvas.Top="280">化工路</Label>
+        <Label Canvas.Left="110" Canvas.Top="350">西流湖</Label>
+        <Label Canvas.Left="175" Canvas.Top="347">梅园</Label>
+        <Label Canvas.Left="257" Canvas.Top="321" >秦岭路</Label>
+        <Label Canvas.Left="280" Canvas.Top="370">绿域广场</Label>
+        <Label Canvas.Left="350" Canvas.Top="373">郑州</Label>
+        <Label Canvas.Left="370" Canvas.Top="335">二七广场</Label>
+        <Label Canvas.Left="400" Canvas.Top="265">紫荆山</Label>
+        <Label Canvas.Left="510" Canvas.Top="329">雁庄</Label>
+        <Label Canvas.Left="517" Canvas.Top="259">黄河东路</Label>
+        <Label Canvas.Left="620" Canvas.Top="297">七里河</Label>
+        <Label Canvas.Left="672" Canvas.Top="300">郑州东</Label>
+        <Label Canvas.Left="728" Canvas.Top="297">体育中心</Label>
+        <Label Canvas.Left="738" Canvas.Top="240">龙子湖</Label>
+        <Label Canvas.Left="730" Canvas.Top="127">龙子湖北</Label>
+
+
+        <StackPanel Width="80" Background="White" Orientation="Horizontal" Canvas.Left="175" Canvas.Top="20">
+            <Label FontSize="15" Background="#902C2C">2</Label>
+            <Label FontSize="15" Content="南北线" />
+        </StackPanel>
+        <Label Canvas.Left="260" Canvas.Top="30">黄河</Label>
+        <Label Canvas.Left="300" Canvas.Top="30">天河路</Label>
+        <Label Canvas.Left="350" Canvas.Top="30">毛庄</Label>
+        <Label Canvas.Left="385" Canvas.Top="30">中州大学</Label>
+        <Label Canvas.Left="460" Canvas.Top="50">广播台</Label>
+        <Label Canvas.Left="426" Canvas.Top="102">龙环路</Label>
+        <Label Canvas.Left="460" Canvas.Top="167">关虎屯</Label>
+        <Label Canvas.Left="410" Canvas.Top="203">黄河路</Label>
+        <Label Canvas.Left="426" Canvas.Top="335">帆布厂街</Label>
+        <Label Canvas.Left="455" Canvas.Top="407">五里堡</Label>
+        <Label Canvas.Left="426" Canvas.Top="473">长江路</Label>
+        <Label Canvas.Left="465" Canvas.Top="517">宇通路</Label>
+        <Label Canvas.Left="465" Canvas.Top="563">向阳路</Label>
+
+
+        <StackPanel Width="90" Background="White" Orientation="Horizontal" Canvas.Left="5" Canvas.Top="143">
+            <Label FontSize="15" Background="#11FF41">3</Label>
+            <Label FontSize="15" Content="高新区线" />
+        </StackPanel>
+        <Label Canvas.Top="192">白松路</Label>
+        <Label Canvas.Left="45" Canvas.Top="190">西四环</Label>
+        <Label Canvas.Left="140" Canvas.Top="192">垂柳路</Label>
+        <Label Canvas.Left="195" Canvas.Top="192">兴陵铺</Label>
+        <Label Canvas.Left="280" Canvas.Top="220">大石桥</Label>
+        <Label Canvas.Left="320" Canvas.Top="295">泰康路</Label>
+        <Label Canvas.Left="500" Canvas.Top="375">未来路</Label>
+        <Label Canvas.Left="540" Canvas.Top="337">凤凰台</Label>
+        <Label Canvas.Left="580" Canvas.Top="336">中州大道</Label>
+        <Label Canvas.Left="635" Canvas.Top="335">东建材</Label>
+        <Label Canvas.Left="746" Canvas.Top="423">西营岗</Label>
+        <Label Canvas.Left="748" Canvas.Top="475">单庄</Label>
+        <Label Canvas.Left="740" Canvas.Top="520">托月路</Label>
+        <Label Canvas.Left="700" Canvas.Top="574">金广南路</Label>
+
+
+        <StackPanel Width="90" Background="White" Orientation="Horizontal" Canvas.Left="180" Canvas.Top="87">
+            <Label FontSize="15" Background="#E9C639">4</Label>
+            <Label FontSize="15" Content="郑东线" />
+        </StackPanel>
+        <Label Canvas.Left="270" Canvas.Top="114">老鸦陈</Label>
+        <Label Canvas.Left="325" Canvas.Top="114">省体中心</Label>
+        <Label Canvas.Left="380" Canvas.Top="146">海洋馆</Label>
+        <Label Canvas.Left="500" Canvas.Top="94">民安街</Label>
+        <Label Canvas.Left="590" Canvas.Top="150">龙湖</Label>
+        <Label Canvas.Left="545" Canvas.Top="231">如意湖北</Label>
+        <Label Canvas.Left="572" Canvas.Top="410">建业</Label>
+        <Label Canvas.Left="528" Canvas.Top="475">七里河</Label>
+        <Label Canvas.Left="532" Canvas.Top="520">莱茵雨路</Label>
+        <Label Canvas.Left="564" Canvas.Top="565">南三环</Label>
+        <Label Canvas.Left="645" Canvas.Top="567">鹅庄</Label>
+        <Label Canvas.Left="691" Canvas.Top="525">曹古寺</Label>
+
+        <StackPanel  Width="90" Background="White" Orientation="Horizontal" Canvas.Left="145" Canvas.Top="253">
+            <Label FontSize="15" Background="#2AA5F8">5</Label>
+            <Label FontSize="15" Content="环线" />
+        </StackPanel>
+        <Label Canvas.Left="275" Canvas.Top="182">天明路</Label>
+        <Label Canvas.Left="360" Canvas.Top="190">农大</Label>
+        <Label Canvas.Left="485" Canvas.Top="231">众意路</Label>
+        <Label Canvas.Left="580" Canvas.Top="254">外环东路</Label>
+        <Label Canvas.Left="682" Canvas.Top="233">祭城</Label>
+        <Label Canvas.Left="682" Canvas.Top="375">小店</Label>
+        <Label Canvas.Left="641" Canvas.Top="415">经北四路</Label>
+        <Label Canvas.Left="645" Canvas.Top="480">经开三街</Label>
+        <Label Canvas.Left="590" Canvas.Top="480">商英街</Label>
+        <Label Canvas.Left="470" Canvas.Top="475">城东南路</Label>
+        <Label Canvas.Left="335" Canvas.Top="478">客运总站</Label>
+        <Label Canvas.Left="295" Canvas.Top="480">航院</Label>
+        <Label Canvas.Left="231" Canvas.Top="480">帝湖</Label>
+        <Label Canvas.Left="185" Canvas.Top="415">淮河路</Label>
+        <Label Canvas.Left="180" Canvas.Top="378">陇海西路</Label>
+        <Label Canvas.Left="200" Canvas.Top="288">牛寨</Label>
+        <Label Canvas.Left="231" Canvas.Top="244">朱屯</Label>
+
+
+        <StackPanel Width="90" Background="White" Orientation="Horizontal" Canvas.Left="245" Canvas.Top="534">
+            <Label FontSize="15" Background="#532AF8">6</Label>
+            <Label FontSize="15" Content="龙子湖线" />
+        </StackPanel>
+        <Label Canvas.Left="335" Canvas.Top="540">郑寨</Label>
+        <Label Canvas.Left="300" Canvas.Top="420">古玩城</Label>
+        <Label Canvas.Left="370" Canvas.Top="403">铁路局</Label>
+        <Label Canvas.Left="400" Canvas.Top="420">陇海东路</Label>
+        <Label Canvas.Left="465" Canvas.Top="293">建业</Label>
+        <Label Canvas.Left="550" Canvas.Top="295">百富街</Label>
+        <Label Canvas.Left="620" Canvas.Top="235">东风路</Label>
+        <Label Canvas.Left="647" Canvas.Top="154">彩云街</Label>
+        <Label Canvas.Left="700" Canvas.Top="155">龙子湖西</Label>
+        <Label Canvas.Left="755" Canvas.Top="192">龙子湖东</Label>
+    </Canvas>
+
+</Page>

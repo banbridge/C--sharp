@@ -1,0 +1,50 @@
+﻿<Page x:Class="T12地铁系统.ManagerPages.开户"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      Title="Open_account" Height="250" Width="350">
+    <Border Background="Transparent" BorderBrush="Black" BorderThickness="2" CornerRadius="20" Padding="20" Margin="0,0,0,10" >
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="20">
+                添加新用户</Label>
+            <TextBlock Grid.Row="1" Grid.Column="0" Text="用户名：" HorizontalAlignment="Right"
+                       VerticalAlignment="Center" FontSize="15" />
+            <TextBox Grid.Row="1" Grid.Column="1"  Margin="10,5,0,5" Name="username" Background="Transparent" HorizontalAlignment="Left" Width="144"/>
+            <Label Name="username_Error" Width="Auto" Height="5" Grid.Row="1" Grid.Column="1" VerticalAlignment="Bottom"/>
+            <Image Name="image1" Grid.Row="1" Grid.Column="1" ToolTip="用户名为空" Source="/images/error.png" Width="20" Height="20" Margin="0,7,23,5" HorizontalAlignment="Right" d:LayoutOverrides="Width" />
+            <TextBlock Grid.Row="2" Grid.Column="0" Text="密   码：" HorizontalAlignment="Right"
+                       VerticalAlignment="Center" FontSize="15"/>
+            <PasswordBox Grid.Row="2" Grid.Column="1" Margin="10,5,50,5" PasswordChar="*" Name="pwd"
+                         Background="Transparent" />
+
+            <Image Grid.Row="2" Name="image2" ToolTip="密码为空" Grid.Column="1" Source="/images/error.png" Width="20" Height="20" Margin="0,5,23,7" HorizontalAlignment="Right" d:LayoutOverrides="Width" />
+            <TextBlock Grid.Row="3" Grid.Column="0" Text="开户时间：" HorizontalAlignment="Right"
+                       VerticalAlignment="Center" FontSize="15" />
+            <TextBox Grid.Row="3" Grid.Column="1" IsEnabled="False" Margin="10,5,50,5" Name="open_time" 
+                     Background="Transparent"/>
+            <TextBlock Grid.Row="4" Grid.Column="0" Text="身份证号：" HorizontalAlignment="Right"
+                       VerticalAlignment="Center" FontSize="15"/>
+            <TextBox Text="410327199705061253" Grid.Row="4" Grid.Column="1" Margin="10,5,50,5" Name="ID" Background="Transparent"/>
+            <Label Grid.Row="5" Grid.Column="1" Name="ID_Error" Width="100" HorizontalAlignment="Left" Height="22"
+                   Foreground="Red" VerticalAlignment="Top" FontSize="10"/>
+            <Button Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Content="添加" Name="add"
+                    Width="80" Height="30" HorizontalAlignment="Right" Margin="0,0,20,0"
+                    Background="Transparent" Click="add_Click" />
+        </Grid>
+    </Border>
+</Page>

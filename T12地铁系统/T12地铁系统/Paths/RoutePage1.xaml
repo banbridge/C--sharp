@@ -1,0 +1,73 @@
+﻿<Page x:Class="期末作业.ExamplePage.RoutePage1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:期末作业.ExamplePage"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="800"
+      Title="RoutePage1">
+    <Page.Resources>
+        <Style TargetType="Ellipse">
+            <Setter Property="Width" Value="20"/>
+            <Setter Property="Height" Value="20"/>
+            <Setter Property="Fill" >
+                <Setter.Value>
+                    <RadialGradientBrush>
+                        <GradientStop Color="Gold" Offset="0.25"/>
+                        <GradientStop Color="Red" Offset="0.50"/>
+                        <GradientStop Color="Purple" Offset="1"/>
+                    </RadialGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="15"/>
+        </Style>
+    </Page.Resources>
+    <Canvas Width="800" Height="600">
+        <Path Stroke="#F73809" StrokeThickness="8" Data="M 102 135  102 320 C 105 338 120 338 120 338 L 280 338 308 368 369 368 449 289 740 289 C 763 289 763 270 763 270  L763 150"/>
+        <Ellipse  Margin=" 90 135"/>
+        <Ellipse  Margin="90 185"/>
+        <Ellipse  Margin="90 235"/>
+        <Ellipse  Margin="90 285"/>
+        <Ellipse  Margin="120,325"/>
+        <Ellipse  Margin="170,325"/>
+        <Ellipse  Margin="220,325"/>
+        <Ellipse  Margin="270,325"/>
+        <Ellipse  Margin="300,355"/>
+        <Ellipse  Margin="360,355"/>
+        <Ellipse  Margin="385,330"/>
+        <Ellipse  Margin="410,305"/>
+        <Ellipse  Margin="435,280"/>
+        <Ellipse  Margin="485,280"/>
+        <Ellipse  Margin="535,280"/>
+        <Ellipse  Margin="585,280"/>
+        <Ellipse  Margin="635,280"/>
+        <Ellipse  Margin="685,280"/>
+        <Ellipse  Margin="735,280"/>
+        <Ellipse  Margin="753,220"/>
+        <Ellipse  Margin="753,150"/>
+        <Label Canvas.Left="135" Canvas.Top="135">郑州大学</Label>
+        <Label Canvas.Left="135" Canvas.Top="189">科学大道</Label>
+        <Label Canvas.Left="135" Canvas.Top="240">梧桐街</Label>
+        <Label Canvas.Left="135" Canvas.Top="285">化工路</Label>
+        <Label Canvas.Left="90" Canvas.Top="350">西流湖</Label>
+        <Label Canvas.Left="155" Canvas.Top="352">梅园</Label>
+        <Label Canvas.Left="200" Canvas.Top="350">秦岭路</Label>
+        <Label Canvas.Left="265" Canvas.Top="285">碧沙尚</Label>
+        <Label Canvas.Left="280" Canvas.Top="370">绿域广场</Label>
+        <Label Canvas.Left="365" Canvas.Top="370">郑州</Label>
+        <Label Canvas.Left="410" Canvas.Top="335">二七广场</Label>
+        <Label Canvas.Left="435" Canvas.Top="310">人民南</Label>
+        <Label Canvas.Left="410" Canvas.Top="249">紫荆山</Label>
+        <Label Canvas.Left="470" Canvas.Top="249">雁庄</Label>
+        <Label Canvas.Left="514" Canvas.Top="305">黄河东路</Label>
+        <Label Canvas.Left="550" Canvas.Top="246" >农业东路</Label>
+        <Label Canvas.Left="620" Canvas.Top="246">七里河</Label>
+        <Label Canvas.Left="665" Canvas.Top="305">郑州东</Label>
+        <Label Canvas.Left="730" Canvas.Top="300">体育中心</Label>
+        <Label Canvas.Left="693" Canvas.Top="215">龙子湖</Label>
+        <Label Canvas.Left="678" Canvas.Top="144">龙子湖北</Label>
+    </Canvas>
+</Page>

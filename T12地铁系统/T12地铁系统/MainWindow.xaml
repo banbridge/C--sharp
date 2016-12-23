@@ -1,0 +1,380 @@
+﻿<Window x:Class="T12地铁系统.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:T12地铁系统"
+        mc:Ignorable="d" WindowStyle="None" 
+        Title="MainWindow" Height="850" Width="1500" Background="WhiteSmoke" >
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary
+                        Source="/XamlResources/Languages.xaml" />
+                <ResourceDictionary
+                        Source="/XamlResources/zh-CN.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid Margin="20,0,40.6,30.2">
+        <Grid.Resources>
+            <Style  TargetType="Border">
+                <Setter Property="BorderThickness" Value="10"/>
+                <Setter Property="BorderBrush" Value="Silver"/>
+                <Setter Property="Margin" Value="10 10 10 20"/>
+            </Style>
+            <Style x:Key="radius_btn" TargetType="Button">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border BorderBrush="{TemplateBinding Control.BorderBrush}" BorderThickness="0" CornerRadius="16" Name="PART_Background">
+                                <Border.Background>
+                                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                        <GradientStop Color="#FFEBC386" Offset="0.0" />
+                                        <GradientStop Color="#FFFF8900" Offset="0.5" />
+                                        <GradientStop Color="#FFD16565" Offset="0.0" />
+                                    </LinearGradientBrush>
+                                </Border.Background>
+                                <ContentPresenter Content="{TemplateBinding ContentControl.Content}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <Style x:Key="button_style1" TargetType="Button">
+                <Setter Property="Background" Value="Orchid"/>
+                <Setter Property="Foreground" Value="Black"/>
+                <Setter Property="FontSize" Value="25"/>
+                <Setter Property="Height" Value="30"/>
+                <Setter Property="Width" Value="80"/>
+                <Setter Property="FontFamily" Value="楷体"/>
+                <Setter Property="BorderThickness" Value="3"/>
+                <Setter Property="BorderBrush" Value="Green"/>
+                <Setter Property="Margin" Value="3 5"/>
+            </Style>
+        </Grid.Resources>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="281*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="360*"/>
+            <RowDefinition Height="40*"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" Grid.ColumnSpan="2" Background="#FFA90BE0" Height="100" BorderThickness="0" Margin="0" VerticalAlignment="Top">
+
+
+            <Grid>
+                <Grid Width="600" Background="#00ff" Name="stack1" Height="40" ClipToBounds="True"  HorizontalAlignment="Center" Margin="428,96,425.6,-36">
+                    <Label Height="Auto" Width="850" x:Name="label1"  HorizontalAlignment="Right"
+               VerticalAlignment="Center" Foreground="Red" FontSize="18"
+               Content="欢迎进入仿郑州地铁系统，该系统由12小组完成，小组成员：高逸博，杨皓强，黄科强，王一"/>
+                </Grid>
+
+                <StackPanel Orientation="Horizontal"  Margin="10,0,0,0" HorizontalAlignment="Left" Width="270" Height="90" VerticalAlignment="Top" >
+                    <Image HorizontalAlignment="Left" Width="40" Source="/images/地铁.png"/>
+                    <TextBlock  FontSize="40"  Foreground="White" Margin="40,10,0,29.6" Width="156" >郑州地铁</TextBlock>
+                    <TextBlock  FontSize="20"   Margin="-180,60,0,-0.4" Foreground="Orange" Width="211" >ZHENGZHOU METRO</TextBlock>
+                </StackPanel>
+                <Label Foreground="White" FontSize="40" Content="{DynamicResource position}" Width="191" Height="60" Margin="499,10,0,0" HorizontalAlignment="Left" FontFamily="Segoe UI Semibold" VerticalAlignment="Top"/>
+                <Label Foreground="White" FontSize="60" Content="{DynamicResource Henu}" Width="258" FontWeight="Bold" Margin="690,10,0,0" HorizontalAlignment="Left" FontFamily="宋体" Height="81" VerticalAlignment="Top"/>
+                <Button Height="40"  Margin="0,7,120,53" FontSize="30" Foreground="White" HorizontalAlignment="Right" Width="200">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Border BorderThickness="0" CornerRadius="15">
+                                <Border.Background>
+                                    <LinearGradientBrush>
+                                        <GradientStop Color="#FF1AF31A" Offset="0.5"/>
+                                    </LinearGradientBrush>
+                                </Border.Background>
+                                <ContentPresenter Content="{TemplateBinding ContentControl.Content}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                    <TextBlock Text="{DynamicResource service}" FontSize="27" FontWeight="Bold" FontFamily="楷体" Foreground="White" />
+                </Button>
+
+                <Label Content="mm-dd-yy" Name="label_year" FontFamily="楷体" FontSize="30" Foreground="White" Margin="0,47,9.6,0" Height="43" VerticalAlignment="Top"  HorizontalAlignment="Right" Width="362" />
+            </Grid>
+
+        </Border>
+        <TextBlock Name="label_user" Background="DarkOrchid" Text="欢迎你，连sew你" FontFamily="楷体" FontWeight="Bold"  TextAlignment="Center" Foreground="White"  TextWrapping="Wrap" FontSize="27" Margin="10,22.6,0,0" Height="32" Grid.Row="1" Visibility="Hidden" VerticalAlignment="Top" HorizontalAlignment="Left" Width="199"/>
+        <Button Name="btn_login" Click="btn_login_Click" Padding="3" Margin="59,9.6,44.2,0" Grid.Row="1" Height="40" VerticalAlignment="Top" >
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border BorderBrush="{TemplateBinding Control.BorderBrush}" BorderThickness="0"  CornerRadius="15" Name="PART_Background">
+                        <Border.Background>
+                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                <GradientStop Color="#FFEDC8C8" Offset="0.0" />
+                                <GradientStop Color="#FF7C04A5" Offset="0.5" />
+                                <GradientStop Color="#FFB4A2A2" Offset="1" />
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <ContentPresenter Content="{TemplateBinding ContentControl.Content}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+            <StackPanel Orientation="Horizontal" Height="40" Width="116">
+                <Image Source="/images/登录.png" Height="40" Width="30" />
+                <Label Foreground="White" Content="{DynamicResource user_login}" FontWeight="Bold" FontSize="25"/>
+            </StackPanel>
+        </Button>
+        <Border Grid.Column="0" Margin="0,63,10,0" Background="#FF2E2C83" BorderBrush="#FF2E2C83" CornerRadius="10" Height="562" VerticalAlignment="Top" Grid.Row="1" HorizontalAlignment="Right" Width="183" >
+
+            <StackPanel Button.Click="ButtonChangeTick_Click"  Orientation="Vertical" >
+                <StackPanel.Resources>
+                    <Style TargetType="Button">
+                        <Setter Property="Margin" Value="17,7,17,7"/>
+                        <Setter Property="Height" Value="40"/>
+                        <Setter Property="FontSize" Value="30"/>
+                        <Setter Property="Foreground" Value="White"/>
+                        <Setter Property="Width" Value="130"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border BorderThickness="0" BorderBrush="{TemplateBinding Control.BorderBrush}" CornerRadius="15">
+                                        <Border.Background>
+                                            <LinearGradientBrush>
+                                                <GradientStop Color="#FFE8E5EA" Offset="0.0"/>
+                                                <GradientStop Color="#FF5653CB" Offset="0.1"/>
+                                                <GradientStop Color="#FF5653CB" Offset="0.5"/>
+                                                <GradientStop Color="#FF5653CB" Offset="0.9"/>
+                                                <GradientStop Color="#FFB99BCD" Offset="1"/>
+                                            </LinearGradientBrush>
+                                        </Border.Background>
+                                        <ContentPresenter Content="{TemplateBinding ContentControl.Content}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </StackPanel.Resources>
+                <Button Tag="1" Content="{DynamicResource One_Ticket}" />
+                <Button Tag="2" Content="{DynamicResource Two_Ticket}"></Button>
+                <Button Tag="3" Content="{DynamicResource Three_Ticket}"></Button>
+                <Button Tag="4" Content="{DynamicResource Four_Ticket}"></Button>
+                <Button Tag="5" Content="{DynamicResource Five_Ticket}"></Button>
+                <Button Tag="6" Content="{DynamicResource Six_Ticket}"></Button>
+                <Button Tag="7" Content="{DynamicResource Seven_Ticket}"></Button>
+                <Button Tag="8" Content="{DynamicResource Eight_Ticket}"></Button>
+                <Button Tag="10" Content="{DynamicResource Ten_Ticket}"></Button>
+                <Button Tag="15" Content="{DynamicResource Fifth_Ticket}"></Button>
+
+
+
+            </StackPanel>
+        </Border>
+
+        <Border Grid.Column="1" BorderThickness="2" Height="632" Margin="19.8,0,19.6,64.8" VerticalAlignment="Bottom" Grid.RowSpan="2" Grid.Row="1"  >
+            <Grid VerticalAlignment="Bottom"  HorizontalAlignment="Left"  Margin="0,0,0,0" Height="624" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="11*"/>
+                    <ColumnDefinition Width="121*"/>
+                    <ColumnDefinition Width="880*"/>
+                    <ColumnDefinition Width="202*"/>
+
+                </Grid.ColumnDefinitions>
+                <Border Grid.Column="0" Margin="0,0,0,9.8" Grid.RowSpan="2" BorderThickness="10" CornerRadius="14" Background="#FF1B18AD" BorderBrush="#FF1B18AD" HorizontalAlignment="Left" Grid.ColumnSpan="2" >
+                    <StackPanel  >
+                        <StackPanel.Resources>
+                            <Style TargetType="Button">
+                                <Setter Property="Margin" Value="10,20,10,0"/>
+                                <Setter Property="FontSize" Value="20"/>
+                                <Setter Property="Height" Value="40"/>
+                                <Setter Property="Width" Value="85"/>
+                                <Setter Property="Foreground" Value="White"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type Button}">
+                                            <Border BorderThickness="0" BorderBrush="{TemplateBinding Control.BorderBrush}" CornerRadius="10">
+                                                <Border.Background>
+                                                    <LinearGradientBrush>
+                                                        <GradientStop Color="#FFE53619" Offset="0.5"/>
+                                                    </LinearGradientBrush>
+                                                </Border.Background>
+                                                <ContentPresenter Content="{TemplateBinding ContentControl.Content}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </StackPanel.Resources>
+                        <Button Button.Click="ButtonPathchoice_Click" Content="{DynamicResource total_line}" Tag="AllPage.xaml"/>
+                        <Button Button.Click="ButtonPathchoice_Click" Content="{DynamicResource One_line}" Tag="Path1.xaml"/>
+                        <Button Button.Click="ButtonPathchoice_Click" Content="{DynamicResource Two_line}" Tag="Path2.xaml"/>
+                        <Button Button.Click="ButtonPathchoice_Click" Content="{DynamicResource Three_line}" Tag="Path3.xaml"/>
+                        <Button Button.Click="ButtonPathchoice_Click" Content="{DynamicResource Four_line}" Tag="Path4.xaml"/>
+                        <Button Button.Click="ButtonPathchoice_Click"  Content="{DynamicResource Five_line}" Tag="Path5.xaml"/>
+
+                        <Label Content="{DynamicResource choice}" Margin="6,40,0,0" FontSize="17" Foreground="White"/>
+                        <TextBox Text="1" IsReadOnly="True" FontSize="40" Name="textbox_ticketCnt" Margin="10" Height="50"/>
+                        <Button Click="ButtonChangeTick_Click" x:Name="btn_subTicket" Width="44" Margin="7 2 55 0" >
+                            <Image Source="/images/减少.png" Width="43"/>
+                        </Button>
+                        <Button Click="ButtonChangeTick_Click" Name="btn_addTicket" Width="40    " Margin="55 -40 0 0" >
+                            <Image Source="/images/增加.png" />
+                        </Button>
+                    </StackPanel>
+                </Border>
+
+                <GroupBox Margin="10,10,0.4,0.4" FontSize="30" FontWeight="Bold" FontFamily="楷体" Header="{DynamicResource Quick_buy_tickets}" BorderBrush="Green" BorderThickness="5" Grid.Column="3" Grid.Row="0">
+                    <WrapPanel Button.Click="Button_TicketStyle_Click" Background="Linen">
+                        <WrapPanel.Resources>
+                            <Style TargetType="Button">
+                                <Setter Property="Margin" Value="15 15 10 0"/>
+                                <Setter Property="Height" Value="44"/>
+                                <Setter Property="Width" Value="140"/>
+
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type Button}">
+                                            <Border BorderBrush="{TemplateBinding Control.BorderBrush}" BorderThickness="0" CornerRadius="14" Name="PART_Background">
+                                                <Border.Background>
+                                                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                                        <GradientStop Color="#FFEBC386" Offset="0.0" />
+                                                        <GradientStop Color="#FFD51AE5" Offset="0.5" />
+                                                        <GradientStop Color="#FFD16565" Offset="0.0" />
+                                                    </LinearGradientBrush>
+                                                </Border.Background>
+                                                <ContentPresenter Content="{TemplateBinding ContentControl.Content}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </WrapPanel.Resources>
+                        <Button Tag="2"  Content="{DynamicResource Two_yuan_ticket}"></Button>
+                        <Button Tag="3" Content="{DynamicResource Three_yuan_ticket}"></Button>
+                        <Button Tag="4" Content="{DynamicResource Four_yuan_ticket}"></Button>
+                        <Button Tag="6" Content="{DynamicResource Six_yuan_ticket}"></Button>
+                    </WrapPanel>
+                </GroupBox>
+
+                <GroupBox Margin="10,9.6,0.4,0.8" FontSize="30" FontWeight="Bold" FontFamily="宋体" Header="{DynamicResource Ticket_Information}" BorderBrush="Red" BorderThickness="5" Grid.Column="3" Grid.Row="1">
+                    <StackPanel Background="#FF06760F" Margin="5">
+                        <StackPanel.Resources>
+
+                            <Style TargetType="Button">
+                                <Setter Property="Margin" Value="15 15 10 0"/>
+                                <Setter Property="Height" Value="40"/>
+                                <Setter Property="Width" Value="Auto"/>
+                                <Setter Property="FontFamily" Value="楷体"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type Button}">
+                                            <Border BorderBrush="{TemplateBinding Control.BorderBrush}" BorderThickness="0" CornerRadius="14" Name="PART_Background">
+                                                <Border.Background>
+                                                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                                        <GradientStop Color="#FFEBC386" Offset="0.0" />
+                                                        <GradientStop Color="#FF991129" Offset="0.5" />
+                                                        <GradientStop Color="#FFD16565" Offset="0.0" />
+                                                    </LinearGradientBrush>
+                                                </Border.Background>
+                                                <ContentPresenter Content="{TemplateBinding ContentControl.Content}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+
+                        </StackPanel.Resources>
+                        <Label Margin="2,2,2,0" Foreground="White" Content="{DynamicResource star_point}"></Label>
+                        <Button Click="ButtonClrear_Click" Foreground="White" Tag="pos_start" Content="{DynamicResource Clear}" Width="70" Margin="85,-45,8,0"   />
+                        <TextBox Margin="0,8,0,0" IsReadOnly="True" Name="textBox_start" TextAlignment="Center"/>
+                        <Label Margin="0,8,0,0" Foreground="White" Content="{DynamicResource end_point}"></Label>
+                        <Button Tag="pos_end" Foreground="White" Click="ButtonClrear_Click"  Content="{DynamicResource Clear}" Width="70" Margin="85,-45,8,0"   />
+                        <TextBox Margin="0,8,0,0" IsReadOnly="True"  TextAlignment="Center" Name="textBox_end"/>
+                        <Label Width="110" Foreground="White" Margin="0,10,0,0" HorizontalAlignment="Left" Content="{DynamicResource money}"></Label>
+                        <Label Name="label_oneOfMoney" Foreground="White" Width="auto" Margin="105,-50,0,0" HorizontalAlignment="Left" FontSize="40" >0</Label>
+                    </StackPanel>
+                </GroupBox>
+
+                <Frame Grid.Column="2" x:Name="main_frame" Width="840" NavigationUIVisibility="Hidden" Height="613" Background="Aqua" VerticalAlignment="Top" Grid.RowSpan="2" Margin="4.633,10,0,0" HorizontalAlignment="Left"  />
+            </Grid>
+
+        </Border>
+
+        <Border Grid.Row="2" BorderThickness="0" Grid.ColumnSpan="2" Margin="0,5,3,5" >
+            <StackPanel Orientation="Horizontal" Button.Click="ButtonButtom_Click" Margin="0">
+                <Button Name="btn_changeEnglish" Tag="{DynamicResource Languages}"  Style="{StaticResource radius_btn}"  Margin="20,10,0,0" Padding="3"   Width="150"  Height="45" HorizontalAlignment="Left" >
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/images/飞机.png" Height="30" Width="30" />
+                        <Label Foreground="White" Content="{DynamicResource Languages}" FontWeight="Bold" FontSize="22"/>
+                    </StackPanel>
+                </Button>
+                <Button Name="btn_addMoney" Margin="70,10,0,0" Style="{StaticResource radius_btn}" Padding="3"  Width="160"  Height="45" HorizontalAlignment="Left" >
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                        <Image Source="/images/充值.png" Height="30" Width="34" />
+                        <Label Foreground="White" Content="{DynamicResource recharge}" FontWeight="Bold" FontSize="25"/>
+                    </StackPanel>
+                </Button>
+                <Button Name="btn_ok"   Padding="3"  Width="auto"  Height="50" HorizontalAlignment="Right" Margin="300,10,0,0" VerticalAlignment="Top" >
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border BorderBrush="{TemplateBinding Control.BorderBrush}" BorderThickness="0" CornerRadius="15" Name="PART_Background">
+                                <Border.Background>
+                                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                        <GradientStop Color="#FF9D6D6D" Offset="0.0" />
+                                        <GradientStop Color="#FF819C0A" Offset="0.5" />
+                                        <GradientStop Color="#FFC88989" Offset="0.0" />
+                                    </LinearGradientBrush>
+                                </Border.Background>
+                                <ContentPresenter Content="{TemplateBinding ContentControl.Content}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/images/确认.png" Height="30" Width="30" />
+                        <Label Foreground="White" Content="{DynamicResource Confirm_the_choice}" FontWeight="Bold" FontSize="25"/>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="btn_back"   Padding="3"  Width="130"  Height="45"  Margin="190,10,0,-0.2" VerticalAlignment="Top" >
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="0" CornerRadius="15" x:Name="PART_Background">
+                                <Border.Background>
+                                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                        <GradientStop Color="#FF9D6D6D" Offset="0.0" />
+                                        <GradientStop Color="#FFDF1725" Offset="0.5" />
+                                        <GradientStop Color="#FFC88989" Offset="0.0" />
+                                    </LinearGradientBrush>
+                                </Border.Background>
+                                <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/images/返回.png" Height="30" Width="30" />
+                        <Label Foreground="White" Content="{DynamicResource cancel}" FontWeight="Bold" FontSize="25"/>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="btn_shutdown"   Padding="3"  Width="130"  Height="45" HorizontalAlignment="Right" Margin="50,10       ,0,-0.2" VerticalAlignment="Top" >
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="0" CornerRadius="15" x:Name="PART_Background">
+                                <Border.Background>
+                                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                        <GradientStop Color="#FF9D6D6D" Offset="0.0" />
+                                        <GradientStop Color="#FFDF1725" Offset="0.5" />
+                                        <GradientStop Color="#FFC88989" Offset="0.0" />
+                                    </LinearGradientBrush>
+                                </Border.Background>
+                                <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/images/关闭.png" Height="30" Width="30" />
+                        <Label Foreground="White" Content="{DynamicResource Exit}" FontWeight="Bold" FontSize="25"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7A040170-7F78-4D07-B1AB-78932F1BD6B0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>T12地铁系统</RootNamespace>
+    <AssemblyName>T12地铁系统</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>发布\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="ManagerPages\充值.xaml.cs">
+      <DependentUpon>充值.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerPages\开户.xaml.cs">
+      <DependentUpon>开户.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerPages\查询.xaml.cs">
+      <DependentUpon>查询.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerPages\销户.xaml.cs">
+      <DependentUpon>销户.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MyDbModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyDbModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MyDbModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MyDbModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyDbModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ServeSelect.xaml.cs">
+      <DependentUpon>ServeSelect.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Solve.cs" />
+    <Compile Include="Ticket.cs">
+      <DependentUpon>MyDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <DependentUpon>MyDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="windows\Login_manager.xaml.cs">
+      <DependentUpon>Login_manager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windows\Login_User.xaml.cs">
+      <DependentUpon>Login_User.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windows\ManagerWindow.xaml.cs">
+      <DependentUpon>ManagerWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windows\PayOk.xaml.cs">
+      <DependentUpon>PayOk.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windows\TicketInfor.xaml.cs">
+      <DependentUpon>TicketInfor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windows\window_addMoney.xaml.cs">
+      <DependentUpon>window_addMoney.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="ManagerPages\充值.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ManagerPages\开户.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ManagerPages\查询.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ManagerPages\销户.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Paths\AllPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Paths\Path1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Paths\Path2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Paths\Path3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Paths\Path4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Paths\Path5.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ServeSelect.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\Login_manager.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\Login_User.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\ManagerWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\PayOk.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\TicketInfor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\window_addMoney.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="XamlResources\en-US.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="XamlResources\Languages.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="XamlResources\zh-CN.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Paths\AllPage.xaml.cs">
+      <DependentUpon>AllPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Paths\Path1.xaml.cs">
+      <DependentUpon>Path1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Paths\Path2.xaml.cs">
+      <DependentUpon>Path2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Paths\Path3.xaml.cs">
+      <DependentUpon>Path3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Paths\Path4.xaml.cs">
+      <DependentUpon>Path4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Paths\Path5.xaml.cs">
+      <DependentUpon>Path5.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EntityDeploy Include="MyDbModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>MyDbModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="MyDbModel.edmx.diagram">
+      <DependentUpon>MyDbModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\header1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\english2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\充值.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\飞机.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\返回.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\地铁.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\关闭.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\增加.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\付款.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\减少.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\denglujiemian.jpg" />
+    <Resource Include="images\touqian.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\确认.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\初始.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\不过.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\不过1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\登录.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\6.png" />
+    <Resource Include="images\7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\timg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\01.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\yinlian.png" />
+    <Resource Include="images\勾.png" />
+    <SplashScreen Include="images\8.jpg" />
+    <Resource Include="images\bgadd.png" />
+    <Content Include="MyDbModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MyDbModel.edmx</DependentUpon>
+      <LastGenOutput>MyDbModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="MyDbModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MyDbModel.edmx</DependentUpon>
+      <LastGenOutput>MyDbModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="MyDb_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>MyDb.mdf</DependentUpon>
+    </Content>
+    <Resource Include="images\星号.png" />
+    <Content Include="MyDb.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

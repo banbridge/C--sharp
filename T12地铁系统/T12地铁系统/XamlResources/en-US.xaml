@@ -1,0 +1,45 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+    <system:String x:Key="position">Position</system:String>
+    <system:String x:Key="Henu">Henu</system:String>
+    <system:String x:Key="user_login">Log In</system:String>
+    <system:String x:Key="service">Normal Service</system:String>
+    <system:String x:Key="One_Ticket">ONE</system:String>
+    <system:String x:Key="Two_Ticket">TWO</system:String>
+    <system:String x:Key="Three_Ticket">THREE</system:String>
+    <system:String x:Key="Four_Ticket">FOUR</system:String>
+    <system:String x:Key="Five_Ticket">FIVE</system:String>
+    <system:String x:Key="Six_Ticket">SIX</system:String>
+    <system:String x:Key="Seven_Ticket">SEVEN</system:String>
+    <system:String x:Key="Eight_Ticket">EIGHT</system:String>
+    <system:String x:Key="Ten_Ticket">TEN</system:String>
+    <system:String x:Key="Fifth_Ticket">FIFTEEN</system:String>
+
+    <system:String x:Key="total_line">ALL PATH</system:String>
+    <system:String x:Key="One_line">path 1</system:String>
+    <system:String x:Key="Two_line">path 2</system:String>
+    <system:String x:Key="Three_line">path 3</system:String>
+    <system:String x:Key="Four_line">path 4</system:String>
+    <system:String x:Key="Five_line">path 5</system:String>
+
+    <system:String x:Key="choice">NUMBER</system:String>
+
+    <system:String x:Key="Quick_buy_tickets">QUICK BUY</system:String>
+    <system:String x:Key="Two_yuan_ticket">2￥</system:String>
+    <system:String x:Key="Three_yuan_ticket">3￥</system:String>
+    <system:String x:Key="Four_yuan_ticket">4￥</system:String>
+    <system:String x:Key="Six_yuan_ticket">6￥</system:String>
+
+    <system:String x:Key="Ticket_Information">MESSAGE</system:String>
+    <system:String x:Key="Clear">CLS</system:String>
+    <system:String x:Key="star_point">SP:</system:String>
+    <system:String x:Key="end_point">EP:</system:String>
+    <system:String x:Key="money">Money:</system:String>
+
+    <system:String x:Key="recharge">Recharge</system:String>
+    <system:String x:Key="Confirm_the_choice">Confirm</system:String>
+    <system:String x:Key="cancel">Cancel</system:String>
+    <system:String x:Key="Exit">Exit</system:String>
+    <system:String x:Key="Languages">中文</system:String>
+</ResourceDictionary>

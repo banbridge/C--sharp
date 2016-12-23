@@ -1,0 +1,34 @@
+﻿<Page x:Class="T12地铁系统.ManagerPages.销户"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="250" d:DesignWidth="300"
+      Title="销户">
+    <Border Background="Transparent" BorderBrush="Black" BorderThickness="2" CornerRadius="15">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Content="销户" FontSize="20" 
+                   HorizontalAlignment="Center"/>
+
+            <Grid Grid.Row="1" Grid.Column="0" Margin="0,20,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="输入用户名:" HorizontalAlignment="Right"
+                           FontSize="15" Margin="10"/>
+                <TextBox Grid.Row="0" Grid.Column="1" Width="180" Margin="10" Name="del_username"
+                         Background="Transparent"/>
+            </Grid>
+            <Button Grid.Row="2" Grid.Column="0" Content="删除用户" Margin="0,20,20,0" Width="80" Height="25"
+                    HorizontalAlignment="Right" Background="Transparent" Click="Button_Click" />
+            <Label x:Name="label" Foreground="Red" HorizontalAlignment="Left" Margin="107,53,0,0" Grid.Row="1" VerticalAlignment="Top" Grid.RowSpan="2"/>
+        </Grid>
+    </Border>
+</Page>
